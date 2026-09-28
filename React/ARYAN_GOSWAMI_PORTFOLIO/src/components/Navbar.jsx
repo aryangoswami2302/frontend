@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Download, Code2, Sparkles } from 'lucide-react';
+import { Menu, X, Download, Code2 } from 'lucide-react';
 
-const Navbar = ({ activeSection, isDarkMode, setIsDarkMode, onOpenResume }) => {
+const Navbar = ({ activeSection, onOpenResume }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -75,17 +75,8 @@ const Navbar = ({ activeSection, isDarkMode, setIsDarkMode, onOpenResume }) => {
             })}
           </nav>
 
-          {/* Actions Right (Theme Toggle + Resume Button) */}
+          {/* Desktop action */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Theme Toggle */}
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer"
-              title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            >
-              {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-300" />}
-            </button>
-
             {/* Resume Button */}
             <button
               onClick={onOpenResume}
@@ -98,13 +89,6 @@ const Navbar = ({ activeSection, isDarkMode, setIsDarkMode, onOpenResume }) => {
 
           {/* Mobile Menu Toggle */}
           <div className="flex md:hidden items-center gap-2">
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300"
-            >
-              {isDarkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-300" />}
-            </button>
-
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-200 hover:text-cyan-400 focus:outline-none"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Download, Printer, CheckCircle, Mail, Phone, MapPin, Briefcase, GraduationCap, Code } from 'lucide-react';
+import { X, Download, Printer, Mail, Phone, MapPin } from 'lucide-react';
 
 const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;

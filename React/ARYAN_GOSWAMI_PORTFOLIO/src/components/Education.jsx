@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Calendar, MapPin, Award, BookOpen, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, Calendar, MapPin, Award, BookOpen } from 'lucide-react';
 
 const Education = () => {
   const educationItems = [

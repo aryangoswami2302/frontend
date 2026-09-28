@@ -12,17 +12,7 @@ import ResumeModal from './components/ResumeModal';
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
-  const [isDarkMode, setIsDarkMode] = useState(true);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
-
-  // Sync dark mode class with html root element
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
 
   // Section Observer for active nav highlighting on scroll
   useEffect(() => {
@@ -50,13 +40,11 @@ function App() {
   }, []);
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
+    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-400/30 selection:text-cyan-50">
       
       {/* Sticky Header Navbar */}
       <Navbar
         activeSection={activeSection}
-        isDarkMode={isDarkMode}
-        setIsDarkMode={setIsDarkMode}
         onOpenResume={() => setIsResumeOpen(true)}
       />
 

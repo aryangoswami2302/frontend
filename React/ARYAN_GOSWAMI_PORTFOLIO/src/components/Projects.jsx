@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, FolderGit2, Dumbbell, Hotel, ShoppingBag, ArrowUpRight, Sparkles, Shield, Zap } from 'lucide-react';
+import { FolderGit2, Dumbbell, Hotel, ShoppingBag, ArrowUpRight, Zap } from 'lucide-react';
 
 const Projects = () => {
   const projects = [

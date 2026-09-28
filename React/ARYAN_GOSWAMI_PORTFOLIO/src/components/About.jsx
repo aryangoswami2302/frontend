@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Award, BookOpen, Layers, CheckCircle2, Code2, Cpu } from 'lucide-react';
+import { User, Award, BookOpen, Layers, CheckCircle2, Cpu } from 'lucide-react';
 
 const About = () => {
   const highlights = [

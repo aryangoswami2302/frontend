@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail, Sparkles, Terminal, Code, Database, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Mail, Sparkles, Terminal, Code, Database } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
 const Hero = () => {
@@ -26,14 +26,12 @@ const Hero = () => {
 
             {/* Main Greeting & Name */}
             <div className="space-y-2">
-              <h2 className="text-slate-400 font-mono text-base sm:text-lg tracking-wider">
-                Hello World, I'm
-              </h2>
+            
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
                 Aryan <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500">Goswami</span>
               </h1>
               <p className="text-xl sm:text-2xl font-bold text-slate-300 flex items-center justify-center lg:justify-start gap-2 pt-1">
-                <Terminal className="w-6 h-6 text-cyan-400 inline" />
+                
                 <span>Python Full Stack Developer</span>
               </p>
             </div>

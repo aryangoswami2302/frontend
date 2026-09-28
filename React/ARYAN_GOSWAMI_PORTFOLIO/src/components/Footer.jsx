@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Heart, Code2, Mail } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
 const Footer = () => {

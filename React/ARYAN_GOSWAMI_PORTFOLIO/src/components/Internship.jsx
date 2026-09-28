@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Building2, Calendar, CheckCircle2, Code2, Database, ShieldCheck, Cpu } from 'lucide-react';
+import { Briefcase, Building2, Calendar, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 const Internship = () => {
   const responsibilities = [
