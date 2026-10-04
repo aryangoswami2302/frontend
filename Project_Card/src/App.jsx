@@ -1,10 +1,12 @@
 ﻿import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { weddingData } from './config/experience'
 import { submitRsvpToFirestore } from './services/firebase'
+import { useMusicPlayer } from './experience/useMusicPlayer'
 
 const openingSteps = ['A little closer', 'The seal releases', 'Unfolding your invitation', 'Welcome to our story']
 
 function App() {
+  const { startMusic } = useMusicPlayer()
   const [opened, setOpened] = useState(false)
   const [opening, setOpening] = useState(false)
   const [letterOpen, setLetterOpen] = useState(false)
@@ -29,13 +31,14 @@ function App() {
 
   const openInvitation = useCallback(() => {
     if (opening || opened) return
+    startMusic()
     setOpening(true)
     setOpeningStep(0)
     window.setTimeout(() => setOpeningStep(1), 650)
     window.setTimeout(() => setOpeningStep(2), 1350)
     window.setTimeout(() => setOpeningStep(3), 2500)
     window.setTimeout(() => { setLetterOpen(true); setOpening(false) }, 3600)
-  }, [opened, opening])
+  }, [opened, opening, startMusic])
 
   const enterWedding = useCallback(() => {
     if (!letterOpen || transitioning) return
